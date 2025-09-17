@@ -1,0 +1,55 @@
+# ===============================
+# FRONTEND (React + TypeScript)
+# ===============================
+/frontend/node_modules
+/frontend/Images
+/frontend/build
+/frontend/coverage
+/frontend/.pnp
+/frontend/.pnp.js
+/frontend/.DS_Store
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# ===============================
+# BACKEND (.NET Web API)
+# ===============================
+/api/bin/
+/api/obj/
+/api/Logs/
+/api/*.db
+/api/*.db-shm
+/api/*.db-wal
+
+# Configuración sensible
+/api/appsettings.json
+/api/appsettings.*.json
+/api/*.user
+/api/*.suo
+/api/.vs/
+
+# ===============================
+# GENERAL
+# ===============================
+.DS_Store
+Thumbs.db
+
+# Entornos
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
