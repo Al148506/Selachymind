@@ -5,13 +5,14 @@ import {v4 as uuid} from "uuid";
 
 interface Props {
   searchResults: CompanySearch[];
+  onPortfolioCreate: (e: React.SyntheticEvent) => void;
 }
 
-const CardList : React.FC<Props> = ({ searchResults }): JSX.Element => {
+const CardList : React.FC<Props> = ({ searchResults, onPortfolioCreate }): JSX.Element => {
   return  <>
    {searchResults.length > 0 ? (
       searchResults.map((result) => {
-        return <Card id={result.symbol} key={uuid()} searchResult={result} />;
+        return <Card id={result.symbol} key={uuid()} searchResult={result} onPortfolioCreate={onPortfolioCreate}/>;
       })
     ):(
     <h1>No Results</h1>

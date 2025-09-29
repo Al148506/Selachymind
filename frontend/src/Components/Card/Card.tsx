@@ -2,12 +2,14 @@ import React, { JSX } from "react";
 import "./Card.css";
 import HomeAlone from "../../Images/Home_Alone.webp"; // ✅ Import directo
 import { CompanySearch } from "../../company";
+import AddPortfolio from "../Portfolio/AddPotfolio/AddPortfolio";
 interface Props {
   id: string;
   searchResult: CompanySearch;
+  onPortfolioCreate: (e: React.SyntheticEvent) => void;
 }
 
-const Card: React.FC<Props> = ({ id, searchResult }: Props): JSX.Element => {
+const Card: React.FC<Props> = ({ id, searchResult,onPortfolioCreate }: Props): JSX.Element => {
   return (
     <div className="card">
       <img alt="company logo" />
@@ -21,6 +23,7 @@ const Card: React.FC<Props> = ({ id, searchResult }: Props): JSX.Element => {
       <p className="info">
         {searchResult.exchangeShortName} - {searchResult.stockExchange}
       </p>
+      <AddPortfolio onPortfolioCreate={onPortfolioCreate} symbol={searchResult.symbol}/>
     </div>
   );
 };
